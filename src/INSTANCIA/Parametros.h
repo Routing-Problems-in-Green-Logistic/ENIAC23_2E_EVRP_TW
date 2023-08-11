@@ -74,9 +74,9 @@ namespace NS_parametros
         int metodo = METODO_GRASP;
         string commit;
         ParametrosIG paramIg;
-
-        string getParametros();
     };
+
+    string getParametros_str();
 
     struct NoSaida
     {

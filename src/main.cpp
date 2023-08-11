@@ -66,7 +66,9 @@ int main(int argc, char* argv[])
             cout<<"COMMITE: "<<commite<<"\n";
             cout<<"COMPILADO EM: "<<__DATE__<<", "<<__TIME__<<".\n";
 
-            cout<<string(argv[0])<<"\n";
+            cout<<string(argv[0])<<" instancia.txt <PARAMETROS>\n";
+            cout<<getParametros_str();
+
             exit(-1);
         }
 

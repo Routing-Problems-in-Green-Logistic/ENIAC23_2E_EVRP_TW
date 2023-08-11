@@ -627,7 +627,7 @@ void NS_parametros::caregaParametros(Parametros &paramEntrada, int argc, char* a
     else
     {
         cout<<"ERRO ENTRADA; FALTA A INSTANCIA!\n";
-        cout<<paramEntrada.getParametros()<<"\n\n";
+        cout<<getParametros_str()<<"\n\n";
 
         throw "ERRO";
     }
@@ -749,10 +749,21 @@ ParametrosSaida NS_parametros::getParametros()
     return std::move(parametrosSaida);
 }
 
-string NS_parametros::Parametros::getParametros()
-{
-    string saida = "OPCOES VALIDAS: \n\t--seed: semente \n\t--pasta: pasta onde os resultados serao guardados \n\t--execTotal: numero de execucoes totais"
-                   "  \n\t--execAtual: execucao atual \n\t--resulCSV: nome do arquivo csv para escrever os resultados consolidados \n\t --mt: metodo((Grasp ou G) para GRASP, (ACO)\n\t --numItTotal: numero total de iteracoes\n\n";
+string NS_parametros::getParametros_str()
+{   // --alphaSeg 0.35 --betaPrim 0.15 --difBest 0.03 --numItIG 3000 --torneio 1 --taxaRm 0.2
+
+    string saida = "\nPARAMETROS: \n"
+                   "\t--seed: \tsemente (opcional)\n"
+                   "\t--pasta: \tpasta onde os resultados serao guardados \n"
+                   "\t--execTotal: \tnumero de execucoes totais \n"
+                   "\t--execAtual: \texecucao atual \n"
+                   "\t--resulCSV: \tnome do arquivo csv para escrever os resultados consolidados \n"
+                   "\t--numItIG: \tnumero total de iteracoes do IG \n"
+                   "\t--alphaSeg: \tparametro alpha \n"
+                   "\t--betaPrim \tparametro beta \n"
+                   "\t--difBest \tparametro difBest \n"
+                   "\t--torneio \tparametro torneio \n"
+                   "\t--taxaRm \tparametro taxaRm\n\n";
     return saida;
 }
 
