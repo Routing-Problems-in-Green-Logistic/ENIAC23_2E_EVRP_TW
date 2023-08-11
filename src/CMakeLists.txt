@@ -30,7 +30,7 @@ set(SOURCES
         BUSCA_LOCAL/LocalSearch.cpp
         BUSCA_LOCAL/LocalSearch2.cpp
         K_MEANS/k_means.cpp
-        newMain.cpp
+        main.cpp
         Satelite.cpp
         Auxiliary.cpp
         Route.cpp
